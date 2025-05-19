@@ -5,7 +5,7 @@ FROM nginx:${NGINX_VERSION}
 ARG VTS_VERSION="v0.2.4"
 
 RUN apt-get update && \
- apt-get install -y git wget gcc make libpcre3-dev zlib1g-dev libssl-dev libxslt-dev libgd-dev libgeoip-dev vim
+ apt-get install -y git wget gcc make libpcre3-dev zlib1g-dev libssl-dev libxslt-dev libgd-dev libgeoip-dev vim telnet curl
 
 RUN git clone --branch ${VTS_VERSION} https://github.com/vozlt/nginx-module-vts.git /tmp/nginx-module-vts && \
   git clone https://github.com/yaoweibin/nginx_upstream_check_module.git /tmp/nginx_upstream_check_module && \
