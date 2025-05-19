@@ -55,6 +55,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with: 
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: nginx.tar.gz
         asset_name: nginx.tar.gz
         asset_content_type: application/gzip
